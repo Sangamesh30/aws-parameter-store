@@ -5,9 +5,6 @@ resource "aws_ssm_parameter" "params" {
   value = var.params[count.index].value
 }
 
-
-
-
 variable "params" {
   default = [
     {name = "roboshop.dev.frontend.catalogue_url", value = "http://catalogue-dev.awsdevops73.store", type = "string" },
